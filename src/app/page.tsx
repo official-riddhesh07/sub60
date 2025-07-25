@@ -5,8 +5,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 
+type PlanKey = "monthly" | "quarterly" | "halfYearly" | "annual";
+
 export default function Home() {
-  const [activePlan, setActivePlan] = useState("monthly");
+  const [activePlan, setActivePlan] = useState<PlanKey>("monthly");
 
   const testimonials = [
     {
